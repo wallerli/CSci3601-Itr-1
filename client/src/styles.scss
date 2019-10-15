@@ -73,3 +73,63 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   // Sets up theming for our custom components with the light theme
   @include app-theming($dark-theme);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.indicator {
+  font-size: 14px;
+  margin-left: 35px;
+  color: #7f7f7f;
+}
+
+.roomName {
+  font-size: 18px;
+}
+
+mat-card {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+mat-sidenav-content {
+  background-color: #3f51b5;
+}
+
+mat-icon {
+  margin-right: 25px;
+}
+
+#roomSelector, #allRooms {
+  text-align: left;
+}
+
+.room mat-icon {
+  margin-right: 15px;
+}
+
+mat-panel-title {
+  text-transform: capitalize;
+}
+
+.room.mat-card {
+  margin:0;
+  box-shadow: unset;
+}
+
+.machines.mat-expansion-panel {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: unset;
+}
+
+.home {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menuLabel.mat-icon.notranslate.material-icons.mat-icon-no-color{
+  margin-left: 5px;
+}
