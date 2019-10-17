@@ -4,12 +4,10 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
-import org.bson.types.ObjectId;
 
 import java.util.Iterator;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
-import java.util.Observable;
 
 import static com.mongodb.client.model.Filters.eq;
 
@@ -20,6 +18,14 @@ public class LaundryController {
   private  MongoCollection<Document> machinePollingCollection;
   private MongoDatabase pullingDatabase;
 
+  /*
+   * This is a switch for the E2E test
+   * before running the tests
+   * set seedlocalSourse to be true,
+   * after testing, set the boolean
+   * back to true in order to make
+   * the functionailty works.
+   */
   private boolean seedLocalSourse = false;
 
   public LaundryController(MongoDatabase machineDatabase, MongoDatabase roomDatabase, MongoDatabase machinePollingDatabase)  {
